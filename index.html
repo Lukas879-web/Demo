@@ -29,17 +29,18 @@
 }
 
 :root {
-  --paper: #F1F4F0;
-  --paper-2: #E4EBE5;
-  --white: #FBFCFA;
-  --ink: #12262B;
-  --ink-soft: #435659;
-  --deep: #0E3A3E;
-  --teal: #0F5157;
-  --mint: #CDE4DA;
-  --amber: #F2AE1B;
-  --amber-dark: #DE9A06;
-  --line: rgba(18, 38, 43, .22);
+  --paper: #DAE4EC;
+  --paper-2: #C9D8E4;
+  --white: #EDF2F6;
+  --ink: #16293F;
+  --ink-soft: #46586B;
+  --deep: #1D3F5E;
+  --teal: #1E5A8A;
+  --mint: #F6D6BE;
+  --amber: #F2B63C;
+  --action: #C84F17;
+  --action-dark: #A93F0E;
+  --line: rgba(22, 41, 63, .22);
 
   --font-head: "Bricolage Grotesque", "DM Sans", system-ui, sans-serif;
   --font-body: "DM Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
@@ -115,8 +116,8 @@ p { margin: 0 0 1em; }
   padding: .8rem 1.6rem; border-radius: 999px; border: 2px solid var(--ink);
   transition: transform .15s, box-shadow .15s, background-color .15s;
 }
-.btn-action { background: var(--amber); color: var(--ink); }
-.btn-action:hover { background: var(--amber); color: var(--ink); transform: translate(-2px, -2px); box-shadow: 3px 3px 0 var(--ink); }
+.btn-action { background: var(--action); color: #fff; }
+.btn-action:hover { background: var(--action); color: #fff; transform: translate(-2px, -2px); box-shadow: 3px 3px 0 var(--ink); }
 .btn-action:active { transform: none; box-shadow: none; }
 .btn-small { padding: .5rem 1.15rem; font-size: .98rem; }
 
@@ -145,8 +146,8 @@ p { margin: 0 0 1em; }
 .bm-figure { position: relative; aspect-ratio: 400 / 560; width: 100%; }
 .bm-figure svg { width: 100%; height: 100%; overflow: visible; }
 
-.bm-ring { fill: none; stroke: rgba(18, 38, 43, .16); stroke-width: 1.5; stroke-dasharray: 3 8; }
-.bm-shadow { fill: rgba(18, 38, 43, .1); }
+.bm-ring { fill: none; stroke: rgba(22, 41, 63, .16); stroke-width: 1.5; stroke-dasharray: 3 8; }
+.bm-shadow { fill: rgba(22, 41, 63, .1); }
 .limb-outline, .limb-fill { fill: none; stroke-linecap: round; stroke-linejoin: round; }
 .limb-outline { stroke: var(--ink); }
 .limb-fill { stroke: var(--white); }
@@ -155,7 +156,7 @@ p { margin: 0 0 1em; }
 .limb-leg.limb-outline { stroke-width: 40px; }
 .limb-leg.limb-fill { stroke-width: 35px; }
 .body-part { fill: var(--white); stroke: var(--ink); stroke-width: 2.5; }
-.bm-spine { fill: none; stroke: rgba(18, 38, 43, .28); stroke-width: 7; stroke-linecap: round; stroke-dasharray: 9 5; }
+.bm-spine { fill: none; stroke: rgba(22, 41, 63, .28); stroke-width: 7; stroke-linecap: round; stroke-dasharray: 9 5; }
 
 /* Tippbare Gelenkpunkte */
 .hotspot {
@@ -187,7 +188,7 @@ p { margin: 0 0 1em; }
 .gauge { display: flex; align-items: center; gap: 1rem; margin-top: 1.1rem; }
 .gauge svg { width: 126px; height: auto; flex: none; overflow: visible; }
 .gauge-track, .gauge-arc { fill: none; stroke-width: 8; stroke-linecap: round; }
-.gauge-track { stroke: rgba(18, 38, 43, .16); }
+.gauge-track { stroke: rgba(22, 41, 63, .16); }
 .gauge-arc { stroke: var(--teal); stroke-dasharray: 251.33; stroke-dashoffset: 251.33; transition: stroke-dashoffset .7s cubic-bezier(.3, .8, .3, 1); }
 .gauge-arm { stroke: var(--ink); stroke-width: 3; stroke-linecap: round; transform-origin: 100px 100px; transition: transform .7s cubic-bezier(.3, .8, .3, 1); }
 .gauge-pivot { fill: var(--amber); stroke: var(--ink); stroke-width: 2; }
@@ -202,7 +203,7 @@ p { margin: 0 0 1em; }
   background: transparent; border: 1.5px solid var(--ink); border-radius: 999px;
   padding: .35rem .95rem; cursor: pointer; transition: background-color .15s, color .15s;
 }
-.chip:hover { background: rgba(18, 38, 43, .1); }
+.chip:hover { background: rgba(22, 41, 63, .1); }
 .chip[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
 
 /* ---------- Abschnitte ---------- */
@@ -276,11 +277,11 @@ p { margin: 0 0 1em; }
 .plan svg { width: 100%; height: auto; }
 .plan figcaption { font-size: .85rem; color: var(--ink-soft); margin-top: .5rem; }
 .room { stroke: none; }
-.room-a { fill: #DCE9E2; }
-.room-b { fill: #FBFCFA; }
-.room-c { fill: #EEF3EF; }
-.room-d { fill: #FBF0D2; }
-.furniture { fill: rgba(15, 81, 87, .14); stroke: rgba(18, 38, 43, .45); stroke-width: 1.5; }
+.room-a { fill: #CBDBE8; }
+.room-b { fill: #F1F5F8; }
+.room-c { fill: #DFE9F1; }
+.room-d { fill: #F6DFC9; }
+.furniture { fill: rgba(30, 90, 138, .14); stroke: rgba(22, 41, 63, .45); stroke-width: 1.5; }
 .wall { fill: none; stroke: var(--ink); stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
 .plan-label { font-family: var(--font-body); font-size: 15px; font-weight: 600; fill: var(--ink); }
 .plan-note { font-family: var(--font-body); font-size: 13px; fill: var(--ink-soft); }
@@ -321,7 +322,7 @@ p { margin: 0 0 1em; }
 .error { color: #A93823; font-size: .9rem; margin: .35rem 0 0; }
 .error:empty { display: none; }
 .form-demo-note { font-size: .88rem; color: var(--ink-soft); margin: 1rem 0 0; }
-.form-success { margin: 1rem 0 0; padding: .9rem 1rem; background: var(--mint); border-radius: 10px; font-weight: 500; }
+.form-success { margin: 1rem 0 0; padding: .9rem 1rem; background: #CBE5D2; border-radius: 10px; font-weight: 500; }
 
 /* ---------- Footer ---------- */
 .site-footer { background: var(--ink); color: rgba(241, 244, 240, .85); padding: 2.6rem 0; }
@@ -387,8 +388,8 @@ p { margin: 0 0 1em; }
         <svg class="logo-mark" viewBox="0 0 32 32" width="32" height="32" aria-hidden="true" focusable="false">
           <path d="M9 24 V5" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/>
           <path d="M9 24 H28" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/>
-          <path d="M9 14 A10 10 0 0 1 19 24" stroke="#0F5157" stroke-width="2.4" stroke-linecap="round" fill="none"/>
-          <circle cx="9" cy="24" r="4.2" fill="#F2AE1B" stroke="currentColor" stroke-width="2"/>
+          <path d="M9 14 A10 10 0 0 1 19 24" stroke="#1E5A8A" stroke-width="2.4" stroke-linecap="round" fill="none"/>
+          <circle cx="9" cy="24" r="4.2" fill="#F2B63C" stroke="currentColor" stroke-width="2"/>
         </svg>
         <span class="logo-text">Lindenhof <small>Physiotherapie</small></span>
       </a>
