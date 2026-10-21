@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Physiotherapie Lindenhof – Konzeptprojekt</title>
+  <meta name="description" content="Konzeptprojekt von SIMIQO: Beispiel-Website für eine fiktive Physiotherapiepraxis in Wien.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
+
+  <div class="concept-banner" role="note">
+    Konzeptprojekt von <a href="https://simiqo.com">SIMIQO</a>. Die Praxis ist fiktiv, alle Angaben sind erfunden.
+  </div>
+
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="logo" href="#top" aria-label="Physiotherapie Lindenhof, zum Seitenanfang">
+        <svg class="logo-mark" viewBox="0 0 32 32" width="32" height="32" aria-hidden="true" focusable="false">
+          <path d="M9 24 V5" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/>
+          <path d="M9 24 H28" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/>
+          <path d="M9 14 A10 10 0 0 1 19 24" stroke="#0F5157" stroke-width="2.4" stroke-linecap="round" fill="none"/>
+          <circle cx="9" cy="24" r="4.2" fill="#F2AE1B" stroke="currentColor" stroke-width="2"/>
+        </svg>
+        <span class="logo-text">Lindenhof <small>Physiotherapie</small></span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mainNav">
+        <span>Menü</span>
+        <span class="nav-toggle-bars" aria-hidden="true"></span>
+      </button>
+
+      <nav class="main-nav" id="mainNav" aria-label="Hauptnavigation">
+        <ul>
+          <li><a href="#leistungen">Leistungen</a></li>
+          <li><a href="#ablauf">Ablauf</a></li>
+          <li><a href="#praxis">Praxis</a></li>
+          <li><a href="#fragen">Fragen</a></li>
+          <li><a href="#kontakt" class="btn btn-action btn-small">Termin anfragen</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="inhalt">
+
+    <!-- HERO MIT KÖRPERKARTE -->
+    <section class="hero">
+      <div class="container hero-grid">
+
+        <div class="hero-text">
+          <h1>Wo zwickt es? Wir fangen genau dort an.</h1>
+          <p class="lead">
+            Physiotherapie in Wien mit Zeit für Ihre Fragen und einem Plan, den Sie im Alltag
+            wirklich umsetzen können. Tippen Sie auf ein Gelenk der Figur und sehen Sie, wobei wir helfen.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-action" href="#kontakt">Termin anfragen</a>
+            <a class="link-quiet" href="#leistungen">Alle Leistungen ansehen</a>
+          </div>
+          <p class="hero-note">Wir antworten in der Regel innerhalb eines Werktags.</p>
+        </div>
+
+        <div class="bodymap" id="bodymap">
+          <div class="bm-stage">
+            <div class="bm-figure" id="bmFigure">
+              <svg viewBox="0 0 400 560" role="img" aria-label="Schematische Figur mit markierten Gelenken" focusable="false">
+                <defs>
+                  <path id="armL" d="M146 148 L112 236 L98 322" fill="none"/>
+                  <path id="armR" d="M254 148 L288 236 L302 322" fill="none"/>
+                  <path id="legL" d="M176 300 L170 420 L168 520" fill="none"/>
+                  <path id="legR" d="M224 300 L230 420 L232 520" fill="none"/>
+                </defs>
+
+                <!-- Winkelmesser-Linien im Hintergrund -->
+                <circle cx="200" cy="300" r="250" class="bm-ring"/>
+                <circle cx="200" cy="300" r="190" class="bm-ring"/>
+
+                <ellipse cx="200" cy="548" rx="120" ry="8" class="bm-shadow"/>
+
+                <!-- Arme und Beine -->
+                <use href="#armL" class="limb-outline limb-arm"/><use href="#armL" class="limb-fill limb-arm"/>
+                <use href="#armR" class="limb-outline limb-arm"/><use href="#armR" class="limb-fill limb-arm"/>
+                <use href="#legL" class="limb-outline limb-leg"/><use href="#legL" class="limb-fill limb-leg"/>
+                <use href="#legR" class="limb-outline limb-leg"/><use href="#legR" class="limb-fill limb-leg"/>
+
+                <circle cx="95" cy="338" r="11" class="body-part"/>
+                <circle cx="305" cy="338" r="11" class="body-part"/>
+                <ellipse cx="156" cy="535" rx="21" ry="9" class="body-part"/>
+                <ellipse cx="244" cy="535" rx="21" ry="9" class="body-part"/>
+
+                <!-- Hals, Rumpf, Kopf -->
+                <rect x="188" y="94" width="24" height="34" rx="9" class="body-part"/>
+                <path class="body-part" d="M146 134 C170 122 230 122 254 134 C262 160 258 200 246 240 C242 262 250 282 252 304 L148 304 C150 282 158 262 154 240 C142 200 138 160 146 134 Z"/>
+                <ellipse cx="200" cy="66" rx="28" ry="34" class="body-part"/>
+
+                <!-- Wirbelsäule -->
+                <path d="M200 134 V292" class="bm-spine"/>
+              </svg>
+              <!-- Tippbare Gelenkpunkte werden per Skript eingesetzt -->
+            </div>
+          </div>
+
+          <div class="bm-info" aria-live="polite">
+            <h2 class="bm-title" id="bmTitle">Schulter</h2>
+            <div class="bm-block">
+              <h3>Das beschäftigt Sie oft</h3>
+              <p id="bmProblems">Schmerzen beim Heben des Arms, Einschränkung nach Verletzung oder Operation, Spannung zwischen Schulter und Nacken.</p>
+            </div>
+            <div class="bm-block">
+              <h3>Das tun wir</h3>
+              <p id="bmTherapy">Beweglichkeit Schritt für Schritt zurückgewinnen, Muskulatur stabilisieren und die Belastung langsam steigern.</p>
+            </div>
+
+            <div class="gauge">
+              <svg viewBox="0 0 200 118" aria-hidden="true" focusable="false">
+                <path d="M20 100 A80 80 0 0 1 180 100" class="gauge-track"/>
+                <path d="M20 100 A80 80 0 0 1 180 100" class="gauge-arc" id="bmGaugeArc"/>
+                <line x1="100" y1="100" x2="20" y2="100" class="gauge-arm" id="bmGaugeArm"/>
+                <circle cx="100" cy="100" r="5" class="gauge-pivot"/>
+              </svg>
+              <p class="gauge-text">
+                <strong id="bmGaugeValue">180°</strong>
+                <span id="bmGaugeLabel">Arm seitlich anheben</span>
+              </p>
+            </div>
+            <p class="gauge-note">Richtwerte für gesunde Erwachsene. Jeder Körper ist etwas anders.</p>
+          </div>
+
+          <ul class="bm-chips" id="bmChips" aria-label="Körperregion wählen"></ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- LEISTUNGEN -->
+    <section class="section" id="leistungen">
+      <div class="container split">
+        <div class="split-head">
+          <h2>Wobei wir Sie unterstützen</h2>
+          <p>Vier Schwerpunkte, in denen wir uns auskennen. Klappen Sie auf, was zu Ihnen passt.</p>
+          <p class="aside">Nichts davon passt genau? Schreiben Sie uns, wir sagen Ihnen ehrlich, ob wir die richtige Anlaufstelle sind.</p>
+        </div>
+
+        <div class="acc-list">
+          <details class="acc" name="leistung" open>
+            <summary>Rücken, Nacken und Schultern</summary>
+            <div class="acc-body">
+              <p>Verspannungen, Bandscheibenprobleme, Schmerzen nach langem Sitzen. Wir suchen zuerst die Ursache und behandeln dann gezielt, mit manuellen Techniken und einem kurzen Übungsprogramm für Ihren Alltag.</p>
+              <p class="acc-meta">Termine dauern 30 bis 45 Minuten.</p>
+            </div>
+          </details>
+
+          <details class="acc" name="leistung">
+            <summary>Sportverletzungen und Training</summary>
+            <div class="acc-body">
+              <p>Von der ersten Versorgung bis zum Wiedereinstieg in Ihren Sport. Sie bekommen klare Etappen: was schon geht, was als Nächstes kommt und woran wir erkennen, dass Sie bereit sind.</p>
+              <p class="acc-meta">Termine dauern 45 Minuten, teils mit Training im Praxisraum.</p>
+            </div>
+          </details>
+
+          <details class="acc" name="leistung">
+            <summary>Nach Operationen</summary>
+            <div class="acc-body">
+              <p>Begleitung nach Eingriffen an Knie, Hüfte oder Schulter. Wir halten uns an die Vorgaben Ihrer Ärztin oder Ihres Arztes und sprechen uns bei Bedarf direkt ab.</p>
+              <p class="acc-meta">Termine dauern 30 bis 45 Minuten.</p>
+            </div>
+          </details>
+
+          <details class="acc" name="leistung">
+            <summary>Manuelle Therapie und Heilmassage</summary>
+            <div class="acc-body">
+              <p>Gezielte Handgriffe, die Gelenke beweglicher machen und Spannung lösen. Als Ergänzung bekommen Sie Übungen, damit der Effekt zwischen den Terminen nicht verfliegt.</p>
+              <p class="acc-meta">Termine dauern 30 Minuten.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABLAUF -->
+    <section class="section section-deep" id="ablauf">
+      <div class="container">
+        <div class="section-head">
+          <h2>So verläuft Ihre Behandlung</h2>
+          <p>Kein Fließband, sondern ein Weg mit Zwischenstopps, an denen wir gemeinsam prüfen, ob er stimmt.</p>
+        </div>
+
+        <ol class="timeline">
+          <li>
+            <h3>Erster Termin</h3>
+            <p>60 Minuten zum Zuhören und Untersuchen. Am Ende wissen Sie, was los ist und was Sie erreichen wollen.</p>
+          </li>
+          <li>
+            <h3>Behandlungsplan</h3>
+            <p>Sie bekommen einen Plan mit klaren Etappen und die ersten Übungen für zuhause.</p>
+          </li>
+          <li>
+            <h3>Zwischenbilanz</h3>
+            <p>Nach etwa sechs Terminen messen wir erneut und passen den Plan an, wenn nötig.</p>
+          </li>
+          <li>
+            <h3>Abschluss</h3>
+            <p>Sie wissen, was Sie selbst tun können, damit die Beschwerden nicht wiederkommen.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- PRAXIS -->
+    <section class="section" id="praxis">
+      <div class="container praxis-grid">
+        <div class="praxis-text">
+          <h2>Eine Praxis mit kurzen Wegen</h2>
+          <p>
+            Zwei Behandlungsräume, ein Trainingsbereich und ein Empfang, an dem Sie nicht lange warten.
+            Alles liegt auf einer Ebene, vom Eingang bis zur Umkleide.
+          </p>
+
+          <h3 class="praxis-sub">Das Team</h3>
+          <dl class="team">
+            <div>
+              <dt>Anna Beispiel, MSc</dt>
+              <dd>Praxisleitung, Manuelle Therapie</dd>
+            </div>
+            <div>
+              <dt>Max Muster</dt>
+              <dd>Sportphysiotherapie, Training</dd>
+            </div>
+          </dl>
+          <p class="placeholder-note">Platzhalter. Bei einem echten Kundenprojekt kommen hier Fotos und die Namen aus der Praxis hin.</p>
+        </div>
+
+        <figure class="plan">
+          <svg viewBox="0 0 560 392" role="img" aria-labelledby="planTitle planDesc" focusable="false">
+            <title id="planTitle">Grundriss der Praxis</title>
+            <desc id="planDesc">Links unten der Empfang mit ebenerdigem Eingang, darüber Umkleide und WC. Rechts zwei Behandlungsräume und darunter der Trainingsbereich.</desc>
+
+            <!-- Räume -->
+            <rect x="10" y="10" width="200" height="170" class="room room-a"/>
+            <rect x="10" y="180" width="200" height="170" class="room room-b"/>
+            <rect x="210" y="10" width="170" height="170" class="room room-c"/>
+            <rect x="380" y="10" width="170" height="170" class="room room-c"/>
+            <rect x="210" y="180" width="340" height="170" class="room room-d"/>
+
+            <!-- Einrichtung -->
+            <rect x="240" y="100" width="110" height="40" rx="6" class="furniture"/>
+            <rect x="410" y="100" width="110" height="40" rx="6" class="furniture"/>
+            <rect x="240" y="290" width="70" height="36" rx="4" class="furniture"/>
+            <rect x="330" y="290" width="70" height="36" rx="4" class="furniture"/>
+            <rect x="420" y="290" width="70" height="36" rx="4" class="furniture"/>
+            <rect x="40" y="290" width="100" height="30" rx="4" class="furniture"/>
+
+            <!-- Wände mit Türöffnungen -->
+            <path class="wall" d="M70 350 H10 V10 H550 V350 H130"/>
+            <path class="wall" d="M210 10 V215 M210 265 V350"/>
+            <path class="wall" d="M380 10 V180"/>
+            <path class="wall" d="M10 180 H80 M130 180 H280 M330 180 H440 M490 180 H550"/>
+
+            <!-- Beschriftung -->
+            <text x="110" y="82" text-anchor="middle" class="plan-label">Umkleide</text>
+            <text x="110" y="102" text-anchor="middle" class="plan-label">und WC</text>
+            <text x="110" y="256" text-anchor="middle" class="plan-label">Empfang</text>
+            <text x="295" y="68" text-anchor="middle" class="plan-label">Behandlung 1</text>
+            <text x="465" y="68" text-anchor="middle" class="plan-label">Behandlung 2</text>
+            <text x="380" y="256" text-anchor="middle" class="plan-label">Trainingsbereich</text>
+
+            <!-- Eingang -->
+            <path d="M100 358 L92 372 H108 Z" class="plan-arrow"/>
+            <text x="100" y="388" text-anchor="middle" class="plan-note">Ebenerdiger Eingang</text>
+          </svg>
+          <figcaption>Grundriss, nicht maßstäblich.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- FRAGEN -->
+    <section class="section section-tint" id="fragen">
+      <div class="container split">
+        <div class="split-head">
+          <h2>Häufige Fragen vor dem ersten Termin</h2>
+        </div>
+
+        <div class="acc-list">
+          <details class="acc" name="frage">
+            <summary>Was soll ich zum ersten Termin mitbringen?</summary>
+            <div class="acc-body">
+              <p>Bequeme Kleidung, in der Sie sich gut bewegen können, und alles, was es schon gibt: Befunde, Bilder oder die ärztliche Zuweisung. Wenn Sie nichts davon haben, kommen Sie trotzdem.</p>
+            </div>
+          </details>
+          <details class="acc" name="frage">
+            <summary>Brauche ich eine Zuweisung von der Ärztin oder dem Arzt?</summary>
+            <div class="acc-body">
+              <p>Das hängt von Ihrer Versicherung ab. Rufen Sie uns an oder schreiben Sie uns kurz, dann klären wir es vorab mit Ihnen.</p>
+            </div>
+          </details>
+          <details class="acc" name="frage">
+            <summary>Wie viele Termine brauche ich?</summary>
+            <div class="acc-body">
+              <p>Das sagen wir Ihnen nach dem ersten Termin. Bei akuten Beschwerden reichen oft wenige Besuche, bei älteren Problemen planen wir mehr Zeit ein und prüfen den Fortschritt zwischendurch.</p>
+            </div>
+          </details>
+          <details class="acc" name="frage">
+            <summary>Was passiert, wenn ich einen Termin nicht wahrnehmen kann?</summary>
+            <div class="acc-body">
+              <p>Geben Sie uns bitte mindestens 24 Stunden vorher Bescheid, dann verschieben wir ihn kostenlos.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- KONTAKT -->
+    <section class="section" id="kontakt">
+      <div class="container contact-grid">
+        <div>
+          <h2>Termin anfragen</h2>
+          <p>Schreiben Sie uns kurz, worum es geht und wann es Ihnen passt. Wir melden uns persönlich bei Ihnen.</p>
+
+          <dl class="contact-details">
+            <div>
+              <dt>Adresse</dt>
+              <dd>Beispielgasse 1, 1070 Wien <span class="fictional">(fiktiv)</span></dd>
+            </div>
+            <div>
+              <dt>Öffnungszeiten</dt>
+              <dd>Montag bis Donnerstag 7:30 bis 19:00<br>Freitag 7:30 bis 14:00</dd>
+            </div>
+            <div>
+              <dt>Telefon</dt>
+              <dd>+43 1 000 00 00 <span class="fictional">(fiktiv)</span></dd>
+            </div>
+          </dl>
+        </div>
+
+        <form class="form" id="contactForm" novalidate>
+          <div class="field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" autocomplete="name" required>
+            <p class="error" id="nameError" role="alert"></p>
+          </div>
+
+          <div class="field">
+            <label for="email">E-Mail</label>
+            <input type="email" id="email" name="email" autocomplete="email" required>
+            <p class="error" id="emailError" role="alert"></p>
+          </div>
+
+          <div class="field">
+            <label for="anliegen">Worum geht es?</label>
+            <select id="anliegen" name="anliegen">
+              <option>Nacken oder Schulter</option>
+              <option>Rücken</option>
+              <option>Ellbogen</option>
+              <option>Hüfte</option>
+              <option>Knie</option>
+              <option>Sprunggelenk</option>
+              <option>Nach einer Operation</option>
+              <option>Etwas anderes</option>
+            </select>
+          </div>
+
+          <fieldset class="field pills">
+            <legend>Wann passt es Ihnen am besten?</legend>
+            <label><input type="radio" name="zeit" value="frueh" checked><span>Früh am Morgen</span></label>
+            <label><input type="radio" name="zeit" value="vormittag"><span>Vormittags</span></label>
+            <label><input type="radio" name="zeit" value="nachmittag"><span>Nachmittags</span></label>
+            <label><input type="radio" name="zeit" value="abend"><span>Am Abend</span></label>
+          </fieldset>
+
+          <div class="field">
+            <label for="message">Nachricht <span class="optional">(optional)</span></label>
+            <textarea id="message" name="message" rows="4"></textarea>
+          </div>
+
+          <div class="field field-check">
+            <input type="checkbox" id="privacy" name="privacy" required>
+            <label for="privacy">Ich bin einverstanden, dass meine Angaben zur Bearbeitung der Anfrage verwendet werden.</label>
+            <p class="error" id="privacyError" role="alert"></p>
+          </div>
+
+          <button type="submit" class="btn btn-action">Anfrage senden</button>
+          <p class="form-demo-note">Demo: In der Konzeptversion wird nichts gesendet.</p>
+          <p class="form-success" id="formSuccess" role="status" hidden></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <p class="footer-brand">Lindenhof Physiotherapie</p>
+        <p class="footer-small">Fiktive Praxis. Alle Namen, Adressen und Zeiten sind erfunden.</p>
+      </div>
+      <div>
+        <p class="footer-small">Konzeptprojekt von <a href="https://simiqo.com">SIMIQO</a></p>
+        <p class="footer-small">© <span id="year">2026</span></p>
+      </div>
+      <div>
+        <p class="footer-small"><a href="#">Impressum</a> und <a href="#">Datenschutz</a> (Platzhalter)</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
