@@ -1,2 +1,2 @@
-# Physio_demo
-Eine demo Website für eine fiktive Phsysio-Therapie-Praxis
+# Demo
+Hier werden Demo-Konzeptprojekte für kleine Praxen verwaltet
